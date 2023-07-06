@@ -44,6 +44,25 @@ const CarCard = ({ car }: CarCardProps) => {
                     className="object-contain"
                 />
             </div>
+
+            {/* transmission */}
+            <div className="relative flex w-full mt-2">
+                <div className="flex group-hover:invisible w-full justify-between text-grey">
+                    {/* transmission */}
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <Image
+                            src="/steering-wheel.svg"
+                            width={20}
+                            height={20}
+                            alt="Steering wheel"
+                        />
+
+                        <p className="text-[14px]">
+                            {transmission === "a" ? "Automatic" : "Manual"}
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
