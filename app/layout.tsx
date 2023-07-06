@@ -3,7 +3,8 @@ import { NavBar, Footer } from "@/components";
 import "./globals.css";
 
 export const metadata = {
-    title: "DP Carfolio",
+    // title: "DP Carfolio",
+    title: "Car Hub",
     description: " Ignite Your Love for Cars with Exquisite Showcase.",
 };
 

@@ -9,21 +9,26 @@ const Hero = () => {
     return (
         <div className="hero">
             <div className="flex-1 pt-36 padding-x">
+                {/* title */}
                 <h1 className="hero__title">
                     Find, book, or rent a car — quickly & easily!
                 </h1>
 
+                {/* subtitle */}
                 <p className="hero__subtitle">
                     Streamline your car rental experience with our effortless
                     booking process.
                 </p>
 
+                {/* button */}
                 <CustomButton
                     title="Explore cars"
                     containerStyles="bg-primary-blue text-white rounded-full mt-10"
                     handleClick={handleScroll}
                 />
             </div>
+
+            {/* hero image */}
             <div className="hero__image-container">
                 <div className="hero__image">
                     <Image
@@ -32,9 +37,9 @@ const Hero = () => {
                         fill
                         className="object-contain"
                     />
-
-                    <div className="hero__image-overlay" />
                 </div>
+
+                <div className="hero__image-overlay" />
             </div>
         </div>
     );
