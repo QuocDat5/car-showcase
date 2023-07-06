@@ -22,8 +22,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+-   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
@@ -35,3 +35,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## What I've learnt in the making of this project
 
+-   Create & maintain a well-organized file and folder structure
+-   Use Next.js 13 and Server side Rendering
