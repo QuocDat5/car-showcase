@@ -36,4 +36,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## What I've learnt in the making of this project
 
 -   Create & maintain a well-organized file and folder structure
--   Use Next.js 13 and Server side Rendering
+-   Learn & use Next.js 13 latest feature: Server side Rendering
