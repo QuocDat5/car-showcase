@@ -45,10 +45,10 @@ const CarCard = ({ car }: CarCardProps) => {
                 />
             </div>
 
-            {/* transmission */}
+            {/* type of transmission, drivetrain */}
             <div className="relative flex w-full mt-2">
                 <div className="flex group-hover:invisible w-full justify-between text-grey">
-                    {/* transmission */}
+                    {/* type of transmission */}
                     <div className="flex flex-col justify-center items-center gap-2">
                         <Image
                             src="/steering-wheel.svg"
@@ -60,6 +60,30 @@ const CarCard = ({ car }: CarCardProps) => {
                         <p className="text-[14px]">
                             {transmission === "a" ? "Automatic" : "Manual"}
                         </p>
+                    </div>
+
+                    {/* drivetrain */}
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <Image
+                            src="/tire.svg"
+                            width={20}
+                            height={20}
+                            alt="Tire"
+                        />
+
+                        <p className="text-[14px]">{drive.toUpperCase()}</p>
+                    </div>
+
+                    {/* fuel efficiency in miles per gallon */}
+                    <div className="flex flex-col justify-center items-center gap-2">
+                        <Image
+                            src="/gas.svg"
+                            width={20}
+                            height={20}
+                            alt="Gas"
+                        />
+
+                        <p className="text-[14px]">{city_mpg} MPG</p>
                     </div>
                 </div>
             </div>
