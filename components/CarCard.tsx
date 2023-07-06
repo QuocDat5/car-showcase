@@ -24,10 +24,13 @@ const CarCard = ({ car }: CarCardProps) => {
                 </h2>
             </div>
 
+            {/* car rent */}
             <p className="flex mt-6 text-[32px] font-extrabold">
-                <span className="self-start text-[14px] font-semibold">
-                    {carRent}
-                </span>
+                <span className="self-start text-[14px] font-semibold">$</span>
+
+                {carRent}
+
+                <span className="self-end text-[14px] font-medium">/day</span>
             </p>
         </div>
     );
