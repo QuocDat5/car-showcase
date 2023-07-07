@@ -5,7 +5,9 @@ import { useState } from "react";
 
 import { CarProps } from "@/types";
 import CustomButton from "./CustomButton";
-import { calculateCarRent } from "@/utils";
+import { calculateCarRent, generateCarImageUrl } from "@/utils";
+
+import CarDetails from "./CarDetails";
 
 interface CarCardProps {
     car: CarProps;
@@ -39,7 +41,8 @@ const CarCard = ({ car }: CarCardProps) => {
             {/* image */}
             <div className="relative w-full h-40 my-3 object-contain">
                 <Image
-                    src="/hero.png"
+                    // src="/hero.png"
+                    src={generateCarImageUrl(car)}
                     alt="Car model"
                     fill
                     priority
@@ -88,6 +91,7 @@ const CarCard = ({ car }: CarCardProps) => {
                         <p className="text-[14px]">{city_mpg} MPG</p>
                     </div>
                 </div>
+
                 {/* 'view more details' button */}
                 <div className="car-card__btn-container">
                     <CustomButton
@@ -99,6 +103,12 @@ const CarCard = ({ car }: CarCardProps) => {
                     />
                 </div>
             </div>
+
+            <CarDetails
+                isOpen={isOpen}
+                closeModal={() => setIsOpen(false)}
+                car={car}
+            />
         </div>
     );
 };
