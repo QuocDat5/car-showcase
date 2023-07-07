@@ -64,9 +64,9 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                         />
                                     </button>
 
-                                    {/* car details */}
+                                    {/* car images */}
                                     <div className="flex-1 flex flex-col gap-">
-                                        {/* big image */}
+                                        {/* 1 big image */}
                                         <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                                             <Image
                                                 src="/hero.png"
@@ -111,6 +111,30 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                                     className="object-contain"
                                                 />
                                             </div>
+                                        </div>
+                                    </div>
+
+                                    {/* car's details */}
+                                    <div className="flex-1 flex flex-col gap-2">
+                                        {/* car's brand & name */}
+                                        <h2 className="font-semibold text-xl capitalize">
+                                            {car.make} {car.model}
+                                        </h2>
+
+                                        {/* car's specs */}
+                                        <div className="mt-3 flex flex-wrap gap-4">
+                                            {Object.entries(car).map(
+                                                ([key, value]) => (
+                                                    <div
+                                                        className="flex justify-between gap-5 w-full text-right"
+                                                        key={key}
+                                                    >
+                                                        <h4>{key}</h4>
+
+                                                        <p>{value}</p>
+                                                    </div>
+                                                )
+                                            )}
                                         </div>
                                     </div>
                                 </Dialog.Panel>
