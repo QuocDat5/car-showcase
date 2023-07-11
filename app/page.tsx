@@ -30,10 +30,8 @@ export default async function Home({ searchParams }) {
                     <SearchBar />
 
                     <div className="home__filter-container">
-                        {/* <CustomFilter `title="fuel" /> */}
-                        {/* <CustomFilter title="year" /> */}
-                        <CustomFilter />
-                        <CustomFilter />
+                        <CustomFilter title="fuel" options={fuels} />
+                        <CustomFilter title="year" />
                     </div>
                 </div>
 
