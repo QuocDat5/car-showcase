@@ -24,15 +24,23 @@ export default function Home() {
     const [limit, setLimit] = useState(5);
 
     const getCars = async () => {
-        const result = await fetchCars({
-            manufacturer: manufacturer || "",
-            year: year || 2022,
-            fuel: fuel || "",
-            limit: limit || 5,
-            model: model || "",
-        });
+        setLoading(true);
 
-        setAllCars(result);
+        try {
+            const result = await fetchCars({
+                manufacturer: manufacturer || "",
+                year: year || 2022,
+                fuel: fuel || "",
+                limit: limit || 5,
+                model: model || "",
+            });
+
+            setAllCars(result);
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
     };
 
     useEffect(() => {
